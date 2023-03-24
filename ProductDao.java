@@ -10,7 +10,7 @@ public class ProductDao {
     public void create(Product[] products) {
         Scanner sc = new Scanner(System.in);
         Product product = new Product();
-        for (int i = 0; i < products.length; i++) {
+        for (int i = 0; i < products.length; i++)
             if (products[i] == null) {
                 product.setId(i);
                 System.out.println("Please enter product name");
@@ -20,10 +20,9 @@ public class ProductDao {
                 sc.nextLine();
                 products[i] = product;
                 System.out.printf("Product #" + product.getId() + " successfully created with name " +
-                        product.getName() + " and $%.2f.\n",  product.getPrice());
+                        product.getName() + " and $%.2f.\n", product.getPrice());
                 return;
             }
-        }
         System.out.println("Products is full. Please delete an entry first");
 
     }
